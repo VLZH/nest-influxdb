@@ -1,6 +1,6 @@
 {
     "name": "nest-influxdb",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "./dist/index.js",
     "repository": "https://github.com/vlzh/nestjs-influxdb",
     "author": "vlzh",
@@ -9,6 +9,15 @@
         "build": "tsc --declaration --declarationMap",
         "start": "tsc --watch"
     },
+    "keywords": [
+        "nest",
+        "nestjs",
+        "influx",
+        "influxdb",
+        "tsdb",
+        "metrics",
+        "logging"
+    ],
     "dependencies": {},
     "devDependencies": {
         "@nestjs/common": "^6.8.3",
@@ -17,6 +26,10 @@
         "eslint": "^6.5.1",
         "influx": "^5.4.2",
         "typescript": "^3.6.4"
+    },
+    "peerDependencies": {
+        "influx": "^5.4.2",
+        "@nestjs/common": "^6.8.3"
     },
     "prettier": {
         "tabWidth": 4
