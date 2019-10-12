@@ -2,7 +2,7 @@
     "name": "nest-influxdb",
     "version": "0.0.2",
     "main": "./dist/index.js",
-    "repository": "https://github.com/vlzh/nestjs-influxdb",
+    "repository": "https://github.com/vlzh/nest-influxdb",
     "author": "vlzh",
     "license": "MIT",
     "scripts": {
