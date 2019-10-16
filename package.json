@@ -1,6 +1,6 @@
 {
     "name": "nest-influxdb",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "./dist/index.js",
     "repository": "https://github.com/vlzh/nest-influxdb",
     "author": "vlzh",
@@ -28,8 +28,8 @@
         "typescript": "^3.6.4"
     },
     "peerDependencies": {
-        "influx": "^5.4.2",
-        "@nestjs/common": "^6.8.3"
+        "@nestjs/common": "^6.8.3",
+        "influx": "^5.4.2"
     },
     "prettier": {
         "tabWidth": 4
