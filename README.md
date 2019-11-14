@@ -20,6 +20,8 @@ yarn add nest-influxdb
 
 # Usage
 
+Register module:
+
 ```javascript
 import { Module } from "@nestjs/common";
 import { InfluxDbModule, InfluxModuleOptions } from "nest-influxdb";
@@ -39,10 +41,27 @@ import { ConfigService } from "./utils/config/config.service";
                 };
             }
         }),
-        BlogModule
+        TrafficModule
     ],
     controllers: [AppController],
     providers: [AppService]
 })
 export class AppModule {}
+```
+
+Get access to `InfluxDbService` in some your service:
+
+```javascript
+@Injectable()
+export class TrafficService {
+    constructor(private readonly influx_service: InfluxDbService) {}
+
+    public async getLastDay(): Promise<ResponseDto> {
+        const results = await this.influx_service.query(`
+            select MEAN(*) from traffic WHERE time > now() - 1d GROUP BY time(10m);
+        `);
+
+        return results.map(pointToDto);
+    }
+}
 ```
